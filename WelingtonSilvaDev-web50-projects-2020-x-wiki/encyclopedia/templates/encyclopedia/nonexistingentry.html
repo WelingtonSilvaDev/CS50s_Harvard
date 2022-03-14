@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    {% if not search %}
+    <h1> Page Not found. </h1>
+    <div class="alert alert-danger" role="alert">
+        This looks new to me. 😬
+        If you wanna add a new page, <a href="{% url 'newentry' %}"" class="alert-link">just click here.</a>
+        <br> 
+        <a href="{% url 'index' %}">Return to Home</a> 
+    </div>
+    {%endif%}
+
+{%endblock%}
